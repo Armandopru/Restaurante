@@ -47,12 +47,12 @@
 			}
 	}
 	public function leer_clientes(){
-		$sql = "SELECT * FROM es_clientes";
+		$sql = "SELECT * FROM clientes";
 		$res = mysqli_query($this->con, $sql);
 		return $res;
 	}
 	public function eliminar_clientes($id){
-		$sql = "DELETE FROM es_clientes WHERE cli_id=$id";
+		$sql = "DELETE FROM clientes WHERE clientes=$idcliente";
 		$res = mysqli_query($this->con, $sql);
 		if($res){
 			return true;
