@@ -20,7 +20,7 @@
 		  return $return;
 		}
 	public function insertar_clientes($nombre,$apellido,){
-		$sql = "INSERT INTO clientes (nombre), apellido (apellido)VALUES ('$nombre')";
+		$sql = "INSERT INTO cliente (nombre), apellido (apellido)VALUES ('$nombre')";
 		$resultado = mysqli_query($this->con, $sql);
 		if($resultado){
 		  	return true;
@@ -29,7 +29,7 @@
 	 	}
 	}
 	public function seleccionar_clientes($idcliente){
-		$sql = "SELECT * FROM clientes where id_cliente=$idcliente ";
+		$sql = "SELECT * FROM cliente where id_cliente=$idcliente ";
 		
 		$res = mysqli_query($this->con, $sql);
 		$return = mysqli_fetch_object($res);
@@ -37,7 +37,7 @@
 	}
 	public function actualizar_clientes($cliente,$idcliente){
 		
-		$sql = "UPDATE clientes SET nombre='$nombre' WHERE idcliente=$id";
+		$sql = "UPDATE cliente SET nombre='$nombre' WHERE idcliente=$id";
 		
 		$res = mysqli_query($this->con, $sql);
 			if($res){
@@ -47,12 +47,12 @@
 			}
 	}
 	public function leer_clientes(){
-		$sql = "SELECT * FROM clientes";
+		$sql = "SELECT * FROM cliente";
 		$res = mysqli_query($this->con, $sql);
 		return $res;
 	}
 	public function eliminar_clientes($id){
-		$sql = "DELETE FROM clientes WHERE clientes=$idcliente";
+		$sql = "DELETE FROM cliente WHERE clientes=$idcliente";
 		$res = mysqli_query($this->con, $sql);
 		if($res){
 			return true;

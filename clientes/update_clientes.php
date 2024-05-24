@@ -32,11 +32,9 @@ if (isset($_GET['id'])){
  			
  			       
             <?php
-				//código para actualizar la tabla proveedores
 				include ('../conexion.php');
 				$clientes= new basedatos();
 				if(isset($_POST) && !empty($_POST)){
-					//se limpian las variables
 					$nombre_cli = $clientes->limpiar_cadena($_POST['nombre_cli']);
 					$id_cli=intval($_POST['id_cli']);
 					$res = $clientes->actualizar_clientes($nombre_cli,$id_cli);

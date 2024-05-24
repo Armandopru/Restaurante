@@ -1,9 +1,9 @@
 <?php 
 if (isset($_GET['id'])){
 	include ('../conexion.php');
-	$clientes = new basedatos();
+	$cliente = new basedatos();
 	$id=intval($_GET['idclientes']);
-	$res = $clientes->eliminar_clientes($id);
+	$res = $cliente->eliminar_clientes($id);
 	if($res){
 	
 		echo'<script type="text/javascript">

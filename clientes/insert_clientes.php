@@ -26,13 +26,13 @@
  			
  			        <?php
  			        //se crea una nueva instancia
-					$clientes= new basedatos();
+					$cliente= new basedatos();
 					//isset() para comprobar si una variable está definida -- !empty si no viene null
 					if(isset($_POST) && !empty($_POST)){
 						//se limpia la variable $nombre_cat
-						$nombre = $clientes->limpiar_cadena($_POST['nombre']);
+						$nombre = $cliente->limpiar_cadena($_POST['nombre']);
 						//se llama la función insertar y se le pasa el parámetro del nombre de la categoría
-						$res = $clientes->insertar_clientes($nombre,$apellido);
+						$res = $cliente->insertar_clientes($nombre,$apellido);
 						//si la respuesta
 						//si el resultado es true o 1, quiere decir que insertó en la base de datos
 						if($res){
